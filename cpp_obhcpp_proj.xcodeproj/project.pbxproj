@@ -15,6 +15,9 @@
 		52A491CC1F9AC15200A8F9FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52A491CA1F9AC15200A8F9FC /* LaunchScreen.storyboard */; };
 		52A491D71F9AC15300A8F9FC /* cpp_obhcpp_projTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A491D61F9AC15300A8F9FC /* cpp_obhcpp_projTests.swift */; };
 		52A6DF261F9B9F8C0017DDA7 /* libcpp_static_test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A6DF251F9B9F8C0017DDA7 /* libcpp_static_test.a */; };
+		52A6DF311F9BFFF50017DDA7 /* libdraco.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A6DF301F9BFFF50017DDA7 /* libdraco.a */; };
+		52A6DF331F9BFFFC0017DDA7 /* libdracodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A6DF321F9BFFFC0017DDA7 /* libdracodec.a */; };
+		52A6DF351F9BFFFF0017DDA7 /* libdracoenc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A6DF341F9BFFFF0017DDA7 /* libdracoenc.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,9 +45,9 @@
 		52A491D81F9AC15300A8F9FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52A491E41F9AC23700A8F9FC /* cpp_obhcpp_proj-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "cpp_obhcpp_proj-Bridging-Header.h"; sourceTree = "<group>"; };
 		52A6DF251F9B9F8C0017DDA7 /* libcpp_static_test.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcpp_static_test.a; path = "../../../Library/Developer/Xcode/DerivedData/cpp_static_test-bqbsuifjbarltfgrxfveglmqtxew/Build/Products/Debug-iphonesimulator/libcpp_static_test.a"; sourceTree = "<group>"; };
-		52A6DF2A1F9BAD0C0017DDA7 /* libdracoenc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libdracoenc.a; path = ../../draco_xcode/Debug/libdracoenc.a; sourceTree = "<group>"; };
-		52A6DF2B1F9BAD0C0017DDA7 /* libdraco.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libdraco.a; path = ../../draco_xcode/Debug/libdraco.a; sourceTree = "<group>"; };
-		52A6DF2C1F9BAD0C0017DDA7 /* libdracodec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libdracodec.a; path = ../../draco_xcode/Debug/libdracodec.a; sourceTree = "<group>"; };
+		52A6DF301F9BFFF50017DDA7 /* libdraco.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libdraco.a; path = ../../draco_xcode/Debug/libdraco.a; sourceTree = "<group>"; };
+		52A6DF321F9BFFFC0017DDA7 /* libdracodec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libdracodec.a; path = ../../draco_xcode/Debug/libdracodec.a; sourceTree = "<group>"; };
+		52A6DF341F9BFFFF0017DDA7 /* libdracoenc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libdracoenc.a; path = ../../draco_xcode/Debug/libdracoenc.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +56,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				52A6DF261F9B9F8C0017DDA7 /* libcpp_static_test.a in Frameworks */,
+				52A6DF311F9BFFF50017DDA7 /* libdraco.a in Frameworks */,
+				52A6DF351F9BFFFF0017DDA7 /* libdracoenc.a in Frameworks */,
+				52A6DF331F9BFFFC0017DDA7 /* libdracodec.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,9 +119,9 @@
 		52A491E11F9AC1C900A8F9FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				52A6DF2B1F9BAD0C0017DDA7 /* libdraco.a */,
-				52A6DF2C1F9BAD0C0017DDA7 /* libdracodec.a */,
-				52A6DF2A1F9BAD0C0017DDA7 /* libdracoenc.a */,
+				52A6DF341F9BFFFF0017DDA7 /* libdracoenc.a */,
+				52A6DF321F9BFFFC0017DDA7 /* libdracodec.a */,
+				52A6DF301F9BFFF50017DDA7 /* libdraco.a */,
 				52A6DF251F9B9F8C0017DDA7 /* libcpp_static_test.a */,
 			);
 			name = Frameworks;
@@ -383,6 +389,7 @@
 				HEADER_SEARCH_PATHS = (
 					/Users/flynn/Documents/XCodeFiles/cpp_static_test/cpp_static_test,
 					"/Users/flynn/Documents/draco/src/**",
+					/Users/flynn/Documents/draco/src/draco/compression,
 				);
 				INFOPLIST_FILE = cpp_obhcpp_proj/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -390,6 +397,7 @@
 					"/Users/flynn/Library/Developer/Xcode/DerivedData/cpp_static_test-bqbsuifjbarltfgrxfveglmqtxew/Build/Products/Debug-iphonesimulator",
 					/Users/flynn/Documents/draco_xcode/Debug,
 				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "farza.cpp-obhcpp-proj";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "cpp_obhcpp_proj/cpp_obhcpp_proj-Bridging-Header.h";
@@ -409,6 +417,7 @@
 				HEADER_SEARCH_PATHS = (
 					/Users/flynn/Documents/XCodeFiles/cpp_static_test/cpp_static_test,
 					"/Users/flynn/Documents/draco/src/**",
+					/Users/flynn/Documents/draco/src/draco/compression,
 				);
 				INFOPLIST_FILE = cpp_obhcpp_proj/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -416,6 +425,7 @@
 					"/Users/flynn/Library/Developer/Xcode/DerivedData/cpp_static_test-bqbsuifjbarltfgrxfveglmqtxew/Build/Products/Debug-iphonesimulator",
 					/Users/flynn/Documents/draco_xcode/Debug,
 				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "farza.cpp-obhcpp-proj";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "cpp_obhcpp_proj/cpp_obhcpp_proj-Bridging-Header.h";

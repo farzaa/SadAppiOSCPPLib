@@ -13,9 +13,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let OCPPObject = MyOCPPClass()
+//        let OCPPObject = MyOCPPClass()
+        let MyObj = NewDecoderWrapper()
+        MyObj.loadMesh()
         print("Time for C++ stuff")
-        print(OCPPObject.printHelloWorldFromCPP())   }
+//        print(OCPPObject.printHelloWorldFromCPP())
+        
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

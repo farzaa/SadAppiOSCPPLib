@@ -8,8 +8,28 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MyOCPPClass: NSObject
+//struct DecoderWrapper;
+//struct OptionsWrapper;
+//
+//@interface OptionsWrapperWrapper: NSObject {
+//    struct OptionsWrapper *optionsWrapper;
+//}
+//
+//- (id) init;
+//- (void) dealloc;
+//
+//@end
+//
+//@interface DecoderWrapperWrapper: NSObject {
+//    struct DecoderWrapper *decoderWrapper;
+//}
+//
+//- (id) init;
+//- (void) dealloc;
+//- (void) loadMesh;
+//@end
 
--(int)printHelloWorldFromCPP;
-
+@interface NewDecoderWrapper : NSObject
+- (void)loadMesh;
 @end
+
