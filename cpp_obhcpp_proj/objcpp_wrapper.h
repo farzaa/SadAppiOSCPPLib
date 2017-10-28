@@ -30,6 +30,8 @@
 //@end
 
 @interface NewDecoderWrapper : NSObject
+@property (strong, nonatomic) NSString* someProperty;
+@property (strong, nonatomic) NSString* somePropertyOut;
 - (void)loadMesh;
 @end
 

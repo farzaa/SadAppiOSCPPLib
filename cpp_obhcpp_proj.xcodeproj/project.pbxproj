@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52136B9B1F9E6323009928FE /* out.drc in Resources */ = {isa = PBXBuildFile; fileRef = 52136B9A1F9E6323009928FE /* out.drc */; };
 		52A0FCE61F9ACD77002D2E26 /* objcpp_wrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 52A0FCE51F9ACD77002D2E26 /* objcpp_wrapper.mm */; };
 		52A491C21F9AC15200A8F9FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A491C11F9AC15200A8F9FC /* AppDelegate.swift */; };
 		52A491C41F9AC15200A8F9FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A491C31F9AC15200A8F9FC /* ViewController.swift */; };
@@ -14,10 +15,7 @@
 		52A491C91F9AC15200A8F9FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52A491C81F9AC15200A8F9FC /* Assets.xcassets */; };
 		52A491CC1F9AC15200A8F9FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52A491CA1F9AC15200A8F9FC /* LaunchScreen.storyboard */; };
 		52A491D71F9AC15300A8F9FC /* cpp_obhcpp_projTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A491D61F9AC15300A8F9FC /* cpp_obhcpp_projTests.swift */; };
-		52A6DF261F9B9F8C0017DDA7 /* libcpp_static_test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A6DF251F9B9F8C0017DDA7 /* libcpp_static_test.a */; };
-		52A6DF311F9BFFF50017DDA7 /* libdraco.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A6DF301F9BFFF50017DDA7 /* libdraco.a */; };
-		52A6DF331F9BFFFC0017DDA7 /* libdracodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A6DF321F9BFFFC0017DDA7 /* libdracodec.a */; };
-		52A6DF351F9BFFFF0017DDA7 /* libdracoenc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A6DF341F9BFFFF0017DDA7 /* libdracoenc.a */; };
+		52A6DF4A1F9C268D0017DDA7 /* libdraco_arm64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A6DF491F9C268D0017DDA7 /* libdraco_arm64.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		52136B9A1F9E6323009928FE /* out.drc */ = {isa = PBXFileReference; lastKnownFileType = file; name = out.drc; path = drc_files/out.drc; sourceTree = "<group>"; };
 		52A0FCE31F9ACD3F002D2E26 /* objcpp_wrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = objcpp_wrapper.h; sourceTree = "<group>"; };
 		52A0FCE51F9ACD77002D2E26 /* objcpp_wrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = objcpp_wrapper.mm; sourceTree = "<group>"; };
 		52A491BE1F9AC15200A8F9FC /* cpp_obhcpp_proj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cpp_obhcpp_proj.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +47,8 @@
 		52A6DF301F9BFFF50017DDA7 /* libdraco.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libdraco.a; path = ../../draco_xcode/Debug/libdraco.a; sourceTree = "<group>"; };
 		52A6DF321F9BFFFC0017DDA7 /* libdracodec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libdracodec.a; path = ../../draco_xcode/Debug/libdracodec.a; sourceTree = "<group>"; };
 		52A6DF341F9BFFFF0017DDA7 /* libdracoenc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libdracoenc.a; path = ../../draco_xcode/Debug/libdracoenc.a; sourceTree = "<group>"; };
+		52A6DF471F9C267B0017DDA7 /* libdraco.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libdraco.a; path = "../../../Desktop/lols/Debug-iphoneos/libdraco.a"; sourceTree = "<group>"; };
+		52A6DF491F9C268D0017DDA7 /* libdraco_arm64.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libdraco_arm64.a; path = "../../../Desktop/lols/Debug-iphoneos/libdraco_arm64.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,10 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52A6DF261F9B9F8C0017DDA7 /* libcpp_static_test.a in Frameworks */,
-				52A6DF311F9BFFF50017DDA7 /* libdraco.a in Frameworks */,
-				52A6DF351F9BFFFF0017DDA7 /* libdracoenc.a in Frameworks */,
-				52A6DF331F9BFFFC0017DDA7 /* libdracodec.a in Frameworks */,
+				52A6DF4A1F9C268D0017DDA7 /* libdraco_arm64.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +92,7 @@
 		52A491C01F9AC15200A8F9FC /* cpp_obhcpp_proj */ = {
 			isa = PBXGroup;
 			children = (
+				52136B9A1F9E6323009928FE /* out.drc */,
 				52A491C11F9AC15200A8F9FC /* AppDelegate.swift */,
 				52A491C31F9AC15200A8F9FC /* ViewController.swift */,
 				52A491C51F9AC15200A8F9FC /* Main.storyboard */,
@@ -119,6 +118,8 @@
 		52A491E11F9AC1C900A8F9FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				52A6DF491F9C268D0017DDA7 /* libdraco_arm64.a */,
+				52A6DF471F9C267B0017DDA7 /* libdraco.a */,
 				52A6DF341F9BFFFF0017DDA7 /* libdracoenc.a */,
 				52A6DF321F9BFFFC0017DDA7 /* libdracodec.a */,
 				52A6DF301F9BFFF50017DDA7 /* libdraco.a */,
@@ -211,6 +212,7 @@
 			files = (
 				52A491CC1F9AC15200A8F9FC /* LaunchScreen.storyboard in Resources */,
 				52A491C91F9AC15200A8F9FC /* Assets.xcassets in Resources */,
+				52136B9B1F9E6323009928FE /* out.drc in Resources */,
 				52A491C71F9AC15200A8F9FC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,6 +398,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"/Users/flynn/Library/Developer/Xcode/DerivedData/cpp_static_test-bqbsuifjbarltfgrxfveglmqtxew/Build/Products/Debug-iphonesimulator",
 					/Users/flynn/Documents/draco_xcode/Debug,
+					"/Users/flynn/Desktop/lols/Debug-iphoneos",
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "farza.cpp-obhcpp-proj";
@@ -424,6 +427,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"/Users/flynn/Library/Developer/Xcode/DerivedData/cpp_static_test-bqbsuifjbarltfgrxfveglmqtxew/Build/Products/Debug-iphonesimulator",
 					/Users/flynn/Documents/draco_xcode/Debug,
+					"/Users/flynn/Desktop/lols/Debug-iphoneos",
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "farza.cpp-obhcpp-proj";

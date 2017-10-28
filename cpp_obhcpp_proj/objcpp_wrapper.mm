@@ -15,6 +15,7 @@
 #include "draco/io/obj_encoder.h"
 #include "draco/io/parser_utils.h"
 #include "draco/io/ply_encoder.h"
+#include <unistd.h>
 
 //#include "mesh_io.h"
 
@@ -73,11 +74,44 @@
 //}
 
 @implementation NewDecoderWrapper
+
+//- (id)initWithName: (NSString *) Name
+//{
+//    url = Name;
+//    return self;
+//}
 - (void)loadMesh {
+    
+    
     NSLog(@"Hello from loadMesh");
     NSLog(@"Lets stream in our input file...");
-
-    std::ifstream input_file("/Users/flynn/Downloads/mickyd-1_med/out.drc", std::ios::binary);
+    //printf("Name of file in obj... %s\n", _someProperty);
+    printf("Name of IN file in obj... %s\n", [_someProperty UTF8String]);
+    printf("Name of OUT file in obj... %s\n", [_somePropertyOut UTF8String]);
+    char result[ 32 ];
+    ssize_t count = readlink( "/proc/self/exe", result, 32 );
+    std::string lol = result;
+    printf("Curr directory...");
+    printf(lol.c_str());
+    printf("\n");
+    
+    NSFileManager *filemgr;
+    NSString *currentpath;
+    NSArray *filelist;
+    int count_2;
+    int i;
+    
+    filemgr = [NSFileManager defaultManager];
+    
+    filelist = [filemgr contentsOfDirectoryAtPath: @"/" error: nil];
+    
+    count_2 = [filelist count];
+    
+    for (i = 0; i < count_2; i++)
+        NSLog (@"%@", [filelist objectAtIndex: i]);
+    std::string url_in = std::string([_someProperty UTF8String]);
+    std::string url_out = std::string([_somePropertyOut UTF8String]);
+    std::ifstream input_file(url_in, std::ios::binary);
     if (!input_file) {
         printf("Failed opening the input file.\n");
     }
@@ -98,7 +132,8 @@
     draco::DecoderBuffer buffer;
     buffer.Init(data.data(), data.size());
     
-//    draco::CycleTimer timer;
+    draco::CycleTimer timer;
+    timer.Start();
     // Decode the input data into a geometry.
     std::unique_ptr<draco::PointCloud> pc;
     draco::Mesh *mesh = nullptr;
@@ -144,7 +179,7 @@
 //     Save the decoded geometry into a file.
 //     TODO(ostava): Currently only .ply and .obj are supported.
     const std::string extension = draco::parser::ToLower(".obj");
-    const std::string outPath = "/Users/flynn/Downloads/mickyd-1_med_2/ios_out/out.obj";
+    const std::string outPath = url_out;
     if (extension == ".obj") {
         draco::ObjEncoder obj_encoder;
         if (mesh) {
@@ -175,6 +210,9 @@
         printf("Invalid extension of the output file. Use either .ply or .obj\n");
 
     }
+    
+    timer.Stop();
+    printf("TIME VAL %lld", timer.GetInMs());
 }
 @end
 
